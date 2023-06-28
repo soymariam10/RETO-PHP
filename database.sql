@@ -1,0 +1,24 @@
+-- Active: 1687526905523@@172.16.49.130@3306
+CREATE DATABASE campuslands;
+
+CREATE TABLE campers(
+    idCamper INT PRIMARY KEY AUTO_INCREMENT,
+    nombreCamper VARCHAR (50) NOT NULL,
+    apellidoCamper VARCHAR (50),
+    fechaNac DATE,
+    idReg INT FOREIGN KEY
+);
+CREATE TABLE pais(
+    idPais INT PRIMARY KEY AUTO_INCREMENT,
+    nombrePais VARCHAR (50) NOT NULL
+);
+CREATE TABLE departamento(
+    idDep INT PRIMARY KEY AUTO_INCREMENT,
+    nombreDep VARCHAR (50) NOT NULL,
+    idPais INT FOREIGN KEY
+)
+CREATE TABLE region(
+    idReg INT PRIMARY KEY AUTO_INCREMENT,
+    nombreDep VARCHAR (50) NOT NULL,
+    idDep INT FOREIGN KEY
+)
